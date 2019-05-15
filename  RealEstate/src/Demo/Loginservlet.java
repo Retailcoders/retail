@@ -19,6 +19,7 @@ import Model.RegistrationModel;
 public class Loginservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -50,6 +51,22 @@ public class Loginservlet extends HttpServlet {
 
 			String password=request.getParameter("password");
 			String action=request.getParameter("action");
+			Cookies[] cookies=request.getCookies();
+			if(cookies!=null)
+			{
+				for(Cookie cookie:cookies)
+				{
+					if(cookie.getName.equals("username"))
+						
+					username=cookie.getValue();
+				}
+				if(cookie.getName.equals("password"))
+				{
+					password=cookie.getvalue();
+					
+				}
+				request.setAttribute("")
+			}
 			try
 			{
 	        if(action.equals("LogIn"))

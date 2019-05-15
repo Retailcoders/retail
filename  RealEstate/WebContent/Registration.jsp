@@ -37,7 +37,7 @@ top: 0;
 left: 0;
 
 
-background: url(images/living_5.jpg) no-repeat center center fixed; 
+background: url(images/house5.jpg) no-repeat center center fixed; 
 
 -webkit-background-size: cover;
 
@@ -63,17 +63,19 @@ height:350px;
 box-shadow:40px 40px 40px 40px rgba(0,0,0,0.9);
 padding:40px 40px;
 margin-top:50px;
-margin-bottom:150px;
+margin-bottom:100px;
+margin-left:0px;
+margin-right:450px
 
 font-weight:bold;
 font-family:verdana;
-color:black;
+color:green;
 
 
-background-color:white;
-border:1px solid black;
+background-color:black;
+border:3px solid black;
 opacity:0.2;
-filter:alpha(opacity=40s);
+filter:alpha(opacity=60);
 }
 
 </style>

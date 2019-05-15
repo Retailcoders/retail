@@ -115,7 +115,7 @@ height:60px;
       
       
      <form name="Loginform" action="Loginservlet" onsubmit=" return myvalidation()"  method="post">
-      <input type="text" name="username" placeholder="Enter Email" ><!--  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid emailid" required>-->
+      <input type="text" name="username" placeholder="Enter Email"  ><!--  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid emailid" required>-->
       <input type="password" name="password" placeholder="Enter password" > <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
       title = "Must contain at least one number and one uppercase and lowercase letter, 
       and at least 8 or more charcters" required>-->

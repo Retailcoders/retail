@@ -1,6 +1,5 @@
 package Demo;
 import java.io.*;
-
 import java.io.IOException;
 
 import java.io.PrintWriter;
@@ -154,7 +153,7 @@ public class Regservlet extends HttpServlet {
 			    br.append(reverse);
 			    String username=br1.toString();
 			    String password=br.toString();
-			    /*if((username!=null)&& (password!=null)&&(idProof!=null))
+			    if((username!=null)&& (password!=null)&&(idProof!=null))
 				{
 				
 			    Cookie c=new Cookie("username",username);
@@ -167,10 +166,10 @@ public class Regservlet extends HttpServlet {
 				
 					//out.println("<input type='text' name='username' value='"+uname+"'>");
 				
-					 Cookie[] cookies=request.getCookies();
+					/* Cookie[] cookies=request.getCookies();
 					 c=cookies[0];
 					 c1=cookies[1];
-					 c2=cookies[2];
+					 c2=cookies[2];*/
 					// out.println("<input type='text' name='uname' value='"+c.getValue()+"'/>");*/
 				
 			     int result1=d.update(username,password,idProof);
