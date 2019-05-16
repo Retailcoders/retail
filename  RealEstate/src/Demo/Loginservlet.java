@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -51,21 +52,21 @@ public class Loginservlet extends HttpServlet {
 
 			String password=request.getParameter("password");
 			String action=request.getParameter("action");
-			Cookies[] cookies=request.getCookies();
+			Cookie[] cookies=request.getCookies();
 			if(cookies!=null)
 			{
 				for(Cookie cookie:cookies)
 				{
-					if(cookie.getName.equals("username"))
+					if(cookie.getName().equals("username"))
 						
 					username=cookie.getValue();
-				}
-				if(cookie.getName.equals("password"))
+				
+				if(cookie.getName().equals("password"))
 				{
-					password=cookie.getvalue();
+					password=cookie.getValue();
 					
 				}
-				request.setAttribute("")
+				request.setAttribute("", cookie);
 			}
 			try
 			{
@@ -119,8 +120,10 @@ public class Loginservlet extends HttpServlet {
 			  }
 
 			
-  }
+         }
+       }
+	}
 }
-}
+
 
 	

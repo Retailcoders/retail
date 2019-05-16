@@ -1,4 +1,5 @@
 package DA;
+import java.io.FileInputStream;
 import java.sql.*;
 
 
@@ -203,4 +204,96 @@ public class Daoclass {
 	  return result;
 	 }
 
+	public ResultSet search(String location, String propertytype,String price)
+	{
+	 ResultSet rs=null;
+
+       try
+
+       {
+
+        DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+
+		System.out.println(location);
+		System.out.println(propertytype);
+	
+			if(propertytype.equals("")&& (price.equals("")))
+				 {
+
+		  String sql="select * from prescillaanuop.properties where location=? ";
+		 
+		  PreparedStatement stat=con.prepareStatement(sql);
+		 
+		// if(!locality.equals(null))
+		
+
+		  stat.setString(1,location);
+       
+		  rs=stat.executeQuery();
+
+		  
+
+			   return rs;
+
+		  }
+			else if((!propertytype.equals(""))&&(price.equals("")))
+		 {
+
+		  String sql="select * from prescillaanuop.properties where location=? and type=?";
+		 
+		  PreparedStatement stat=con.prepareStatement(sql);
+		 
+	      stat.setString(1,location);
+          stat.setString(2,propertytype);
+		
+		  rs=stat.executeQuery();
+          return rs;
+
+		  }
+			else if((propertytype.equals(""))&&(!price.equals("")))
+		 {
+
+		  String sql="select * from prescillaanuop.properties where location=? and price=?";
+		 
+		  PreparedStatement stat=con.prepareStatement(sql);
+		 
+	      stat.setString(1,location);
+          stat.setString(2,price);
+		
+		  rs=stat.executeQuery();
+          return rs;
+
+		  }
+			else if((!propertytype.equals(""))&&(!price.equals("")))
+		 {
+
+		  String sql="select * from prescillaanuop.properties where location=?  and propertytype=? and price=?";
+		 
+		  PreparedStatement stat=con.prepareStatement(sql);
+		    stat.setString(1,location);
+          stat.setString(2,propertytype);
+		  stat.setString(3,price);
+
+		  rs=stat.executeQuery();
+
+		  
+
+			   return rs;
+
+		  }
+       
+       }
+	catch(SQLException e)
+
+	{
+
+	}
+
+	return rs;
+
+	
+
+    } 
 }
