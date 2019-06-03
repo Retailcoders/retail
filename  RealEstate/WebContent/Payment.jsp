@@ -3,10 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Payment Form</title>
-<link type="text/css" rel="stylesheet" href="CSS/PaymentStyle.css">
+<link type="text/css" rel="stylesheet" href="PaymentStyle.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 <body>
@@ -17,37 +16,40 @@
 </div>
 <h2>Payment Gateway</h2>
 
-
-
 <div class="form">
 
-Amount:<input type="number" class="input" name="amt" onblur="return amt_validation();">
-
-
-
+<div class="card space icon-relative">
+<label class="label">Amount</label>
+<input type="text" class="input" name="amt" placeholder="Enter the amount"  onblur="return amt_validation();">
+<i class="fas fa-user"></i>
+</div>
 
 
 
 <div class="card space icon-relative">
 <label class="label">Card Holder:</label>
-<input type="text" class="input" name="card_holder" onblur="return namevalidation();" placeholder="Card Holder Name">
+<input type="text" class="input" name="card_holder" placeholder="Card Holder Name" onblur="namevalidation()">
 <i class="fas fa-user"></i>
 </div>
 
 <div class="card space icon-relative">
 <label class="label">Card Number:</label>
-<input type="text" class="input"  maxlength="16" name="cardNo" placeholder="Card Number" onblur="return cardvalidation()" >
+<input type="text" class="input" name="cardNo" maxlength="16" placeholder="Card Number" onblur="cardno_validation()">
 <i class="far fa-credit-card"></i>
 </div>
 
 <div class="card-grp space">
 <div class="card-item icon-relative">
 <label class="label">Expiry Date:</label>
-<input type="text" class="input" name="expiry_date" placeholder="MM /YY">
+<input type="text" class="input" name="expiry_date" placeholder="MM/YY" required>
 <i class="far fa-calendar-alt"></i>
 </div>
 
-
+<!--  <div class="card-grp">
+<div class="card-item">
+<label class="label">Expiry Date:</label>
+<input type="text" class="input" name="expiry_date" placeholder="00 / 00">
+</div>-->
 
 <div class="card-item icon-relative">
 <label class="label">CVV:</label>
@@ -56,9 +58,9 @@ Amount:<input type="number" class="input" name="amt" onblur="return amt_validati
 </div>
 </div>
 
-<div class="btn">
-Pay
-</div>
+
+<div><input type="submit" value="Pay" class="btn"></div>
+
 
 </div>
 
@@ -66,81 +68,84 @@ Pay
 </div>
 </form>
 </body>
+
+
 <script>
-function cardvalidation()
+function amt_validation()
 {
-	var cardNo=document.myForm.cardNo.value;
-	if(cardNo==""||cardNo==null)
-	 {
-	 alert ("Card Number Mandatory");
-	 return false;
-	 }
+	var amt=document.myForm.amt.value;
+	 
+	if(amt==""||amt==null)
+	  {
+	  alert ("Amount mandatory ");
+	  return false;
+	  }
+	if(isNaN(amt))
+	  {
+	  alert("Amount should be Number");
+	  return false;
+	  }
+	if(amt<5000)
+	  {
+	  alert("Minimum amount should be 5000");
+	  return false;
+	  }
+ }
+ 
+function cardno_validation()
+{
+ var cardNo=document.myForm.cardNo.value;
+ if(cardNo==""||cardNo==null)
+  {
+  alert ("Card Number Mandatory");
+  return false;
+  }
 
 if(cardNo.length<16)
-	 {
-	 alert("Card Number Minimum digits should be 16");
-	 return false;
-	 }
-	 
+  {
+  alert("Card Number Minimum digits should be 16");
+  return false;
+  }
+  
 if(isNaN(cardNo))
-	{
-	alert("enter valid card Number ")
-	 }
+ {
+ alert("enter valid card Number ")
+  }
 
 }
-function namevalidation()
+function name_validation()
 {
-	var name=document.myForm.card_holder.value;
-	if(name==""||name==null)
-	 {
-	 alert ("Name mandatory");
-	 return false;
-	 }
-	if(!isNaN(name))
-	{
-	alert("Enter valid Name ")
-	 }
-	
+ var name=document.myForm.card_holder.value;
+ if(name==""||name==null)
+  {
+  alert ("Name mandatory");
+  return false;
+  }
+ if(!isNaN(name))
+ {
+ alert("Enter valid Name ")
+  }
+ 
 }
 function cvv_validation()
 {
-	var cvv=document.myForm.cvv.value;
-	if(cvv==""||cvv==null)
-	 {
-	 alert ("CVV mandatory ");
-	 return false;
-	 }
-	if(isNaN(cvv))
-	{
-	alert("Enter valid cvv ")
-	}
-	if(cvv.length<3)
-	{
-	alert("cvv must be 3digits");
-	}
-	
-}
-function amt_validation()
-{
-	 var amt=document.myForm.amt.value;
- 
-if(amt==""||amt==null)
-	 {
-	 alert ("Amount mandatory ");
-	 return false;
-	 }
-if(isNaN(amt))
-	 {
-	 alert("Amount should be Number");
-	 return false;
-	 }
-if(amt<5000)
-	 {
-	 alert("Minimum amount should be 5000");
-	 return false;
-	 }
+ var cvv=document.myForm.cvv.value;
+ if(cvv==""||cvv==null)
+  {
+  alert ("CVV mandatory ");
+  return false;
+  }
+ if(isNaN(cvv))
+ {
+ alert("Enter valid cvv ")
+ }
+ if(cvv.length<3)
+ {
+ alert("cvv must be 3digits");
  }
  
+}
+
 </script>
 
 </html>

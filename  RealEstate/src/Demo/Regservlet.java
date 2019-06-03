@@ -110,7 +110,10 @@ public class Regservlet extends HttpServlet {
         {
 		
             
-			String dob=request.getParameter("dob");
+			String month=request.getParameter("mon");
+			String day=request.getParameter("days");
+			String y=request.getParameter("year");
+			String dob=day+"/"+month+"/"+y;
 
 			RegistrationModel model=new RegistrationModel(firstName,lastName,mobile,idProof,dob);
 

@@ -5,206 +5,65 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<center><h1>Log In Here</h1></center>
 <style>
-body{
-
-background-image:url('images/living_3.png');
-background-size:cover;
-background-repeat:no-repeat;
-margin:0;
-padding:0;
-font-family:Cursive;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}
-.login{
-
-margin:auto;
-width:250px;
-box-shadow:40px 40px 40px 40px rgba(0,0,0,0.9);
-padding:80px 40px;
-margin-top:85px;
-margin-bottom:85px;
-background:linear-gradient(top, red 0%, red 100%);
-color:black;
-}
-
-h2{
-margin:0 0 30px 0;
-padding:5px;
-color:white;
-text-align:center;
-}
-
-input{
-width:100%;
-margin-bottom:30px;
-}
-input[type=text],input[type=password]
+.body
 {
-border:none;
-outline:none;
-border:2px red dotted;
-background:color-pink;
-border-radius:30px;
-box-sizing:border-box;
-color:green;
-font-size:16px;
-padding:20px;
-text-align:center;
+	background:url(images/kitchen.png)no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
 }
-
-::placeholder{
-color:rgba(255,255,255,0.5);
-text-align:center;
-}
-
-input[type=submit]
-{
-border:none;
-outline:none;
-padding:10px;
-color:red;
-font-size:16px;
-font-family:Cursive;
-background:#F08080;
-cursor:pointer;
-border-radius:20px;
-}
-
-input[type=submit]:hover
-{
-background:#efed40;
-color:#262626;
-}
-a
-{
-color:#fff;
-font-size:14px;
-font-weight:cursive;
-text-decoration:none;
-}
-
-a:hover{
-text-decoration:underline;
-}
-
-
-.footer
-{
-position:absolute;
-bottom:0;
-width:100%;
-height:60px;
-
-}
-
-
 </style>
 </head>
+<body class="body">
 
+<center>
+<form name="Loginform" 
+action="RegServlet" method="post" onsubmit=" return myvalidation()"></form>
+ <table border="0" cellpadding="10" cellspacing="1" class="table">
+<tr><td>User Id:</td><td><input type="text" name="username" required></td></tr>
+<tr><td>Password:</td><td><input type="password" name="password" required></td></tr>
+<tr><td><input type="submit"  name="action" value="LogIn"></td></tr>
 
-<body>
+<tr><td> <a href="Registration.jsp" > Sign Up</a></td></tr>
+</table> 
+</center>
 
-<div class="login">
-      <h2>
-      Log In Here
-      </h2>
-      
-      
-     <form name="Loginform" action="Loginservlet" onsubmit=" return myvalidation()"  method="post">
-      <input type="text" name="username" placeholder="Enter UserName"  required><!--  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid emailid" required>-->
-      <input type="password" name="password" placeholder="Enter password" required> <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-      title = "Must contain at least one number and one uppercase and lowercase letter, 
-      and at least 8 or more charcters" required>-->
-      <input type="submit" name="action" value="LogIn" >
-      <a href="Registration.jsp" > Sign Up</a>
-      </form>
-      
-   
+</body>
 <script type="text/javascript">
 
-
-
-
 function myvalidation()
-
 {
-
-	
-
-	
-
 	var username=document.forms["Loginform"]["email"];
-
-	
-
 	var password=document.forms["Loginform"]["password"];
-   if(username.value== "")
-
+    if(username.value== "")
 	{
-
 	window.alert("please enter your username");
-
 	email.focus();
-
 	return false;
-
 	}
-   if(password.value== "")
-
+    if(password.value== "")
 	{
-
 	window.alert("please enter your password");
-
 	password.focus();
-
 	return false;
-
 	}
-
     if(password.value.length < 6) 
-
-	  {
-          alert("Error: Password must contain at least six characters!");
-
-	      password.focus();
-
-	      return false;
-
-	      }
-
-	   
-	       else {
-
-	      alert("Error: Please enter valid username or password");
-
-	      password.focus();
-
-	      return false;
-
-	    }
-
-
-
-
-	    alert("You entered a valid password: " + Password.value);
-
-	    return true;
-
-}
+    {
+     alert("Error: Password must contain at least six characters!");
+	 password.focus();
+	 return false;
+      }
+     else {
+     alert("Error: Please enter valid username or password");
+     password.focus();
+     return false;
+    }
+    alert("You entered a valid password: " + Password.value);
+    return true;
+	}
 
 </script>
-</div>
-<div class="footer">
-<footer>
-<p>
-&#169;copyrightCoolCoders;
-</p>
-</footer>
-</div>
-</head>
-</body>
 </html>

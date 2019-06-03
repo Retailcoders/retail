@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
+
+*
+{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:'Ubuntu',sans-serif;
+}
+body
+{
+	background:url(images/house.png)no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+.payment
+{
+	background:white;
+	max-width:450px;
+	margin-top:80px;
+	height:500px;
+	padding:80px;
+	padding-top:80px;
+	border-radius:5px;
+	position:relative;
+	}
+
+.payment h2
+{
+	text-align:center;
+	Letter-spacing:2px;
+	margin-bottom:80px;
+	font-size:x-large;
+	color:red;
+}
+
+.form.label
+{
+	display:block;
+	color:pink;
+	margin-bottom:10px;
+}
+
+.form.input
+{
+	padding:20px 20px 20px;
+	width:100%
+	
+	text-align:center;
+	border:2px solid #dddddd;
+	border-radius:5px;
+	letter-spacing:1px;
+	word-wrap:10px;
+	outline:none;
+	font-size:20px;
+	color:#555555;
+}
+
+.card-grp
+{
+	display:flex;
+	justify-content:space-between;
+}
+
+.card-item
+{
+	width:100%;
+}
+
+.space
+{
+	margin-bottom:20px;
+}
+
+.icon-relative
+{
+	position:relative;
+}
+
+.icon-relative.fas,.icon-relative.far
+{
+	position:absolute;
+	bottom:12px;
+	left:15px;
+	font-size:20px;
+	color:white;
+}
+
+.btn
+{
+	margin-top:40px;
+	background:red;
+	padding:12px;
+	text-align:center;
+	color:white;
+	border-radius:5px;
+	cursor:pointer;
+	margin-
+}
+
+.payment-logo
+{
+	position:absolute;
+	top:-50px;
+	left:50%;
+	transform:translate(-50%);
+	width:100px;
+	height:100px;
+	background:#f8f8f8;
+	border-radius:50%;
+	box-shadow:0 0 5px rgba(0,0,0,0.2);
+	text-align:center;
+	line-height:85px;
+}
+.payment-logo:before
+{
+	content:"";
+	position:absolute;
+	top:5px;
+	left:5px;
+	width:90px;
+	height:90px;
+	background:red;
+	border-radius:50%;
+	color:white;
+}
+
+.payment-logo p
+{
+	color:black;
+	position:relative;
+	font-family:'Baloo Bhaijaan',cursive;
+	font-size:50px;
+}
+
+<!--@media screen and (max-width:420px)
+{
+	.card-grp
+	{
+	}
+}-->
+
+

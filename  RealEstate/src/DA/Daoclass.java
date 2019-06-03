@@ -15,9 +15,6 @@ public class Daoclass {
 
 	{
 
-
-
-
 		String firstName=model.getFirstName();
 
 		String lastName=model.getLastName();
@@ -45,7 +42,7 @@ public class Daoclass {
 
 		
 
-		  String sql="insert into prescillaanuop.user_register values(?,?,?,?,?,?,?)";
+		  String sql="insert into vamrit25.User_register values(?,?,?,?,?,?,?)";
 
 		  PreparedStatement stat=con.prepareStatement(sql);
 
@@ -223,7 +220,7 @@ public class Daoclass {
 			if(propertytype.equals("")&& (price.equals("")))
 				 {
 
-		  String sql="select * from prescillaanuop.properties where location=? ";
+		  String sql="select * from vamrit25.properties where location=? ";
 		 
 		  PreparedStatement stat=con.prepareStatement(sql);
 		 

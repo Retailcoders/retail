@@ -1,0 +1,407 @@
+@CHARSET "ISO-8859-1";
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: Century Gothic;
+
+}
+
+
+body {
+
+    background: url('images/p3.png'); 
+
+    background-repeat: no-repeat; 
+
+    background-position: center; 
+
+    background-attachment: fixed; 
+
+
+    -webkit-background-size: cover;
+
+    -moz-background-size: cover;
+
+    -o-background-size: cover;
+
+    background-size: cover;
+
+}
+
+.container{
+
+margin-top: 10px;
+
+
+}
+
+.links {
+
+    
+
+    height: 10px;
+
+    color:#000;
+
+}
+
+
+ul {
+
+    float: right;
+
+    list-style-type: none;
+
+}
+
+
+ul li {
+
+    display: inline-block;
+
+}
+
+
+ul li a {
+
+    font-size:medium; 
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    padding: 10px 10px;
+
+    border: 1px solid transparent;
+
+    transition: 0.6s ease;
+
+    display: block;
+
+}
+
+ul li a:hover {
+
+    background-color: red;
+
+    color: #000;
+
+}
+
+ul li ul li {
+
+    display: none;
+
+    margin-left:0;
+
+}
+
+ul li:hover ul li {
+
+    display: block;
+
+}
+
+.logo {
+
+    float:left;
+
+}
+
+.logo img{
+
+    width:300px;
+
+    height:150px;
+
+}
+
+.aboutus {
+
+    background: url(images/p2.png) no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+
+    -moz-background-size: cover;
+
+    -o-background-size: cover;
+
+    background-size: cover;
+
+}
+
+.form-box {
+
+    margin-left: 40px;
+
+    width:300px;
+
+    height:275px;
+
+    margin-top: 200px;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    padding: 30px;
+
+    border-radius:10px;
+
+}
+
+
+ .search-field {
+
+    height: 50px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    outline: none;
+
+} 
+
+
+.location {
+
+    width: 275px;
+
+    height: 20px;
+
+}
+
+.search-btn {
+
+    text-align:center;
+
+    height: 40px;
+
+    width: 100px;
+
+    background: red;
+
+    border: none;
+
+    color: #000;
+
+    border-radius: 20px;
+
+}
+
+
+.search-btn:hover {
+
+    background: #ffc107;
+
+}
+
+
+h3 {
+
+text-align:center;
+
+    color: red;
+
+    font-family: fantasy;
+
+    font-style: normal;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    margin-bottom:20px;
+
+    border-radius:5px;
+
+}
+.links
+{
+
+margin-bottom: 0px;
+height:10px;	
+}
+body
+{
+	background:url(images/p3.png)no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+
+*{
+	margin:0;
+	padding:0;
+	font-family:Century Gothic;
+	
+}
+
+
+ul
+{
+	
+	float:right;
+	list-style-type:none;
+	
+}
+ul li
+{
+	
+	display:inline-block;
+}
+ul li a
+{
+	font-size:x-large;
+	font-weight:bold;
+	text-decoration:none;
+	color:#fff;
+	padding:10px 10px;
+	border:1px solid transparent;
+	transition:0.6s ease;
+	display:block;
+}
+ul li a:hover
+{
+	background-color:red;
+	color:#000;
+}
+
+ul li ul li
+{
+	display:none;
+}
+
+ul li:hover ul li
+{
+	display:block;
+}
+
+.logo{
+	
+	margin-left:0;
+	margin-top:0;
+	margin-right:100px;
+	margin-bottom:100px;
+	justify-content:left;
+	
+}
+
+.main{
+
+	margin-top: 10px;
+	margin-bottom: auto;
+}
+
+
+.desc
+{
+	font-weight:bold;
+	color:white;
+	margin-top:300px;
+	font-size:x-large;
+	font-family:monospace;
+	margin-right:150px;
+	margin-left:150px;
+	
+	margin:auto;
+width:750px;
+box-shadow:20px 20px 20px 20px rgba(0,0,0,0.9);
+padding:30px 10px;
+margin-bottom:auto;
+background:linear-gradient(top, red 0%, red 100%);
+
+
+	
+	
+}
+
+.aboutus
+{
+	background:url(images/p2.png)no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+.header1
+{
+	margin-top:auto;
+	height:100px;
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+	<!--background-size:cover;-->
+	
+	display:flex:
+	justify-content:center;
+	align-items:center;
+	font-family:cursive;
+	
+}
+
+.form-box
+{
+	margin-top:50px;
+	background:rgba(0,0,0,0.5);
+	padding:30px;
+	margin-bottom:100px;
+	   
+    
+}
+
+.search-field
+{
+	height:50px;
+	padding:10px;
+	border:none;
+	border-radius:25px;
+	outline:none;
+}
+
+.location
+{
+	width:300px;
+}
+.propertyType
+{
+	width:150px;
+}
+.budget
+{
+	width:90px;
+}
+.search-btn
+{
+	height:50px;
+	width:100px;
+	background:red;
+	border:none;
+	color:#000;
+	border-radius:25px;
+}
+
+.search-btn:hover
+{
+	background:#ffc107;
+	padding:30px;
+}
+
+
+
+h1
+{
+	color:red;
+	font-family:fantasy;
+	font-style:normal;
+	font-size:50px;
+	letter-spacing:2px;
+	
+}
