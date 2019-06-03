@@ -55,12 +55,12 @@ filter:alpha(opacity=40);
 <table>
 <tr>
 <td>UserName</td>
-<td><input type="text" name="uname"></td></tr>
+<td><input type="text" name="uname" required></td></tr>
 <tr><td>New Password</td>
-<td><input type="password" name="newPwd"></td>
+<td><input type="password" name="newPwd" required></td>
 </tr>
 <tr><td>Confirm Password</td>
-<td><input type="password" name="confrmPwd"></td>
+<td><input type="password" name="confrmPwd" required></td>
 </tr>
 <tr><td></td>
 <td><input class="submit" name="action" type="submit" value="Update"></td>

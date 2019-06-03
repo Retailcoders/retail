@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
 <html>
 
@@ -37,7 +37,7 @@ top: 0;
 left: 0;
 
 
-background: url(images/house5.jpg) no-repeat center center fixed; 
+background: url(images/living_3.png) no-repeat center center fixed; 
 
 -webkit-background-size: cover;
 
@@ -58,9 +58,9 @@ color:orange;
 .transbox
 {
 margin:auto;
-width:250px;
-height:350px;
-box-shadow:40px 40px 40px 40px rgba(0,0,0,0.9);
+width:200px;
+height:300px;
+box-shadow:20px 20px 20px 20px rgba(0,0,0,0.9);
 padding:40px 40px;
 margin-top:50px;
 margin-bottom:100px;
@@ -69,26 +69,14 @@ margin-right:450px
 
 font-weight:bold;
 font-family:verdana;
-color:green;
-
-
-background-color:black;
+color:white;
+background-color:purple;
 border:3px solid black;
-opacity:0.2;
+opacity:0.6;
 filter:alpha(opacity=60);
 }
 
 </style>
-
-
-
-
-
-
-
-
-
-
 </head>
 
 <body>

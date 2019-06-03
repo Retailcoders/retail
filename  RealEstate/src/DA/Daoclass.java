@@ -1,9 +1,10 @@
 package DA;
 import java.io.FileInputStream;
+
 import java.sql.*;
 
 
-import Model.RegistrationModel;
+import Model.*;
 
 public class Daoclass {
 
@@ -295,5 +296,29 @@ public class Daoclass {
 
 	
 
-    } 
+    }
+	 public int paymentDetails(Payment pay)
+	 {
+	  int result=0;
+	  try
+	        {
+	         
+	    DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+	    Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+	    String sql="insert into prescillaanuop.Payment(name,amount,transId) values(?,?,?)";
+	    PreparedStatement stat=con.prepareStatement(sql);
+	     stat.setString(1,pay.getName());
+	     //stat.setString(2,pay.getCardNo());
+	     stat.setInt(2,pay.getAmount());
+	     //stat.setInt(4,pay.getCvv());
+	     stat.setInt(3,pay.getTransId());
+	     result=stat.executeUpdate();
+	     return result;
+	     
+	        }catch(SQLException e)
+	   {
+	    e.printStackTrace();
+	   }
+	 return result; 
+	 }
 }

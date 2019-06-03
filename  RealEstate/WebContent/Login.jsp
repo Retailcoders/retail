@@ -115,8 +115,8 @@ height:60px;
       
       
      <form name="Loginform" action="Loginservlet" onsubmit=" return myvalidation()"  method="post">
-      <input type="text" name="username" placeholder="Enter Email"  ><!--  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid emailid" required>-->
-      <input type="password" name="password" placeholder="Enter password" > <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      <input type="text" name="username" placeholder="Enter UserName"  required><!--  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid emailid" required>-->
+      <input type="password" name="password" placeholder="Enter password" required> <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
       title = "Must contain at least one number and one uppercase and lowercase letter, 
       and at least 8 or more charcters" required>-->
       <input type="submit" name="action" value="LogIn" >
@@ -137,70 +137,23 @@ function myvalidation()
 
 	
 
-	var email=document.forms["Loginform"]["email"];
+	var username=document.forms["Loginform"]["email"];
 
 	
 
 	var password=document.forms["Loginform"]["password"];
-
-
-
-
-		
-
-	
-
-	
-
-	if(email.value== "")
+   if(username.value== "")
 
 	{
 
-	window.alert("please enter your email id");
+	window.alert("please enter your username");
 
 	email.focus();
 
 	return false;
 
-		
-
 	}
-
-	
-
-	if(email.value.indexOf("@",0)<0)
-
-	{
-
-	window.alert("please enter valid email add");
-
-	email.focus();
-
-	return false;
-
-		
-
-	}
-
-	
-
-	if(email.value.indexOf(".",0)<0)
-
-	{
-
-	window.alert("please enter valid email add");
-
-	email.focus();
-
-	return false;
-
-		
-
-	}
-
-	
-
-	if(password.value== "")
+   if(password.value== "")
 
 	{
 
@@ -210,41 +163,21 @@ function myvalidation()
 
 	return false;
 
-		
-
 	}
-
-		
 
     if(password.value.length < 6) 
 
-	      {
+	  {
+          alert("Error: Password must contain at least six characters!");
 
-	        alert("Error: Password must contain at least six characters!");
+	      password.focus();
 
-	        password.focus();
-
-	        return false;
-
-	      }
-
-	      if(password.value == email.value)
-
-	      {
-
-	        alert("Error: Password must be different from Username!");
-
-	        password.focus();
-
-	        return false;
+	      return false;
 
 	      }
 
-	         
-
-	
-
-	      else {
+	   
+	       else {
 
 	      alert("Error: Please enter valid username or password");
 
