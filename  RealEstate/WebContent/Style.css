@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 body
 {
-	background:url(images/pic6.jpg)no-repeat center center fixed;
+	background:url(images/city.png)no-repeat center center fixed;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -32,7 +32,7 @@ body
 .register{
 
 margin:auto;
-width:400px;
+width:600px;
 box-shadow:20px 20px 20px 20px rgba(0,0,0,0.9);
 padding:30px 10px;
 margin-bottom:auto;

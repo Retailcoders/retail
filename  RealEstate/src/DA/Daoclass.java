@@ -10,7 +10,42 @@ public class Daoclass {
 
 
 
+	public ResultSet view(String type1)
+	{
+		ResultSet rs=null;
+		 try
 
+	       {
+
+	        DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
+
+		
+		
+				if(!type1.equals(""))
+					 {
+
+			  String sql="select * from vamrit25.properties where property_type=? ";
+			 
+			  PreparedStatement stat=con.prepareStatement(sql);
+			 
+			// if(!locality.equals(null))
+			
+
+			  stat.setString(1,type1);
+	       
+			  rs=stat.executeQuery();
+
+		return rs;
+	}}
+				catch(SQLException e)
+
+				{
+
+				}
+		 return rs;
+	       }
 	public int insert(RegistrationModel model)
 
 	{
@@ -97,7 +132,7 @@ public class Daoclass {
 
 		
 
-		  String sql="update prescillaanuop.user_register set username=?,password=? where idproof=?";
+		  String sql="update vamrit25.user_register set username=?,password=? where idproof=?";
 
 		  PreparedStatement stat=con.prepareStatement(sql);
 
@@ -146,7 +181,7 @@ public class Daoclass {
 
 		
 
-		  String sql="select * from prescillaanuop.user_register where username=? and password=?";
+		  String sql="select * from vamrit25.user_register where username=? and password=?";
 		  PreparedStatement stat=con.prepareStatement(sql);
 
 		  stat.setString(1,username);
@@ -186,7 +221,7 @@ public class Daoclass {
 	         
 	    DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 	     Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
-	     String qry="update prescillaanuop.user_register set password=? where username=?";
+	     String qry="update vamrit25.user_register set password=? where username=?";
 	     PreparedStatement stat=con.prepareStatement(qry);
 	     stat.setString(1,newPwd);
 	     stat.setString(2,uName);
@@ -216,11 +251,12 @@ public class Daoclass {
 
 		System.out.println(location);
 		System.out.println(propertytype);
+		System.out.println(price);
 	
 			if(propertytype.equals("")&& (price.equals("")))
 				 {
 
-		  String sql="select * from vamrit25.properties where location=? ";
+		  String sql="select * from vamrit25.properties where city=? ";
 		 
 		  PreparedStatement stat=con.prepareStatement(sql);
 		 
@@ -239,7 +275,7 @@ public class Daoclass {
 			else if((!propertytype.equals(""))&&(price.equals("")))
 		 {
 
-		  String sql="select * from prescillaanuop.properties where location=? and type=?";
+		  String sql="select * from vamrit25.properties where city=? and PROPERTY_Type=?";
 		 
 		  PreparedStatement stat=con.prepareStatement(sql);
 		 
@@ -253,7 +289,7 @@ public class Daoclass {
 			else if((propertytype.equals(""))&&(!price.equals("")))
 		 {
 
-		  String sql="select * from prescillaanuop.properties where location=? and price=?";
+		  String sql="select * from vamrit25.properties where city=? and price=?";
 		 
 		  PreparedStatement stat=con.prepareStatement(sql);
 		 
@@ -267,7 +303,7 @@ public class Daoclass {
 			else if((!propertytype.equals(""))&&(!price.equals("")))
 		 {
 
-		  String sql="select * from prescillaanuop.properties where location=?  and propertytype=? and price=?";
+		  String sql="select * from vamrit25.properties where city=?  and PROPERTY_Type=? and price=?";
 		 
 		  PreparedStatement stat=con.prepareStatement(sql);
 		    stat.setString(1,location);
@@ -302,7 +338,7 @@ public class Daoclass {
 	         
 	    DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 	    Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
-	    String sql="insert into prescillaanuop.Payment(name,amount,transId) values(?,?,?)";
+	    String sql="insert into vamrit25.Payment(name,amount,transId) values(?,?,?)";
 	    PreparedStatement stat=con.prepareStatement(sql);
 	     stat.setString(1,pay.getName());
 	     //stat.setString(2,pay.getCardNo());

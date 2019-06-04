@@ -3,11 +3,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="footer.html"></jsp:include>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>gallery</title>
 </head>
-<body>
+
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -63,13 +66,13 @@ h1 {
 }
 </style>
 </head>
-<body>
+<body >
+ 
 <!-- MAIN (Center website) -->
 <div class="main">
-<h1>SERENE HOMES</h1>
+<h2>Property gallery</h2>
 <hr>
-<h2>Property Image Galleries</h2>
-<p>View Property Gallery.</p>
+
 <!-- Portfolio Gallery Grid -->
 <div class="row">
   <div class="column">

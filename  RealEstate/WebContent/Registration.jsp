@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Registration</title>
 <center><h1><i>Register</i></h1>
 <h2><i>Please fill in this form to create an account.</i></h2></center>
 
@@ -22,14 +22,14 @@
  <table border="0" cellpadding="10" cellspacing="1" class="table">
 <tr><td><b>First Name:</b> </td><td><input type="text" name="fn" id="fn" required></td></tr>
 <tr><td><b>Last Name:</b> </td><td><input type="text" name="ln" id="ln" required></td></tr>
-<tr><td><b>Mobile Number:</b></td><td><input type="number" name="mob" id="mob" required maxlength="10"></td></tr>
+<tr><td><b>Mobile Number:</b></td><td><input type="number" name="mob" id="mob"  maxlength="10" required></td></tr>
 
 <tr><td><b>ID Proof Type:<b></b></td><td><select name="proof" id="proof" required>
 <option>Select</option>
 <option name="Aadhar" value="Aadhar">Aadhar</option>
 <optionname="Pan card" value="Pan card">Pan card</option>
 <option name="Voter Id" value="Voter Id">Voter Id</option>
-</select><input id="idproof"  name="idproof" style="visibility:hidden;"></td></tr>
+</select><input id="idproof"  name="idproof" maxlength="12" style="visibility:hidden;"></td></tr>
 
 
 <!-- <tr><td><b>ID Proof Number:</b></td><td><input type="text" maxlength="12" name="idno" id="idn" required></td></tr> -->

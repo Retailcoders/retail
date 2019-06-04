@@ -11,7 +11,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<title>Insert title here</title>
+<title>HomePage</title>
 
 <style>
 
@@ -262,23 +262,23 @@ text-align:center;
 
             <ul>
 
-                <li><a href="#">Home</a></li>
+                <li ><a href="#">Home</a></li>
 
                 <li><a href="#">Buy</a>
 
-                    <ul>
+                    <ul name="type" >
 
-                        <li><a>Flats</a></li>
+                    
 
-                        <li><a>Apartments</a></li>
+                        <li ><a name="type" href="Searchservlet?Apartment" >Apartments</a></li>
 
-                        <li><a>Villas</a></li>
+                        <li><a name="type" href="Searchservlet?villa" >Villas</a></li>
 
-                        <li><a>Luxury Homes</a></li>
+                       
 
-                        <li><a>Plots</a></li>
+                        <li><a name="type" href="Searchservlet?plots" >Plots</a></li>
 
-                        <li><a>Commercial Spaces</a></li>
+                        <li><a name="type" href="Searchservlet?commercial" >Commercial Spaces</a></li>
 
                     </ul>
 
@@ -286,17 +286,17 @@ text-align:center;
 
                     <ul>
 
-                        <li><a>Flats</a></li>
+                       <!--   <li><a>Flats</a></li>-->
 
-                        <li><a>Apartments</a></li>
+                        <li><a name="type" href="Searchservlet?Apartment" >Apartments</a></li>
 
-                        <li><a>Villas</a></li>
+                        <li><a name="type" href="Searchservlet?villa" >Villas</a></li>
 
-                        <li><a>Luxury Homes</a></li>
+                       <!--   <li><a>Luxury Homes</a></li>-->
 
-                        <li><a>Plots</a></li>
+                        <li><a name="type" href="Searchservlet?plots" >Plots</a></li>
 
-                        <li><a>Commercial Spaces</a></li>
+                        <li><a name="type" href="Searchservlet?commercial" >Commercial Spaces</a></li>
 
                     </ul>
 
@@ -304,17 +304,17 @@ text-align:center;
 
                     <ul>
 
-                        <li><a>Flats</a></li>
+                       
 
-                        <li><a>Apartments</a></li>
+                        <li><a name="type" href="Searchservlet?Apartment" >Apartments</a></li>
 
-                        <li><a>Villas</a></li>
+                        <li><a name="type" href="Searchservlet?villa" >Villas</a></li>
 
-                        <li><a>Luxury Homes</a></li>
+                       
 
-                        <li><a>Plots</a></li>
+                        <li><a name="type" href="Searchservlet?plots" >Plots</a></li>
 
-                        <li><a>Commercial Spaces</a></li>
+                        <li><a name="type" href="Searchservlet?commercial" >Commercial Spaces</a></li>
 
                     </ul>
 
@@ -323,6 +323,7 @@ text-align:center;
                 <li><a href="Login.jsp">LogIn</a></li>
 
                 <li><a href="Registration.jsp">Register</a></li>
+                <li><a href="Gallery.jsp">Gallery</a></li>
 
             </ul>
 
@@ -357,6 +358,8 @@ text-align:center;
     
 
 </body>
+
+<jsp:include page="footer.html"></jsp:include>
 
 </html>
 

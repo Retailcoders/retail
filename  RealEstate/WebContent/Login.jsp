@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 <center><h1>Log In Here</h1></center>
 <style>
 .body
@@ -21,27 +21,28 @@
 
 <center>
 <form name="Loginform" 
-action="RegServlet" method="post" onsubmit=" return myvalidation()"></form>
+action="RegServlet" method="post" onsubmit="return myvalidation();">
  <table border="0" cellpadding="10" cellspacing="1" class="table">
-<tr><td>User Id:</td><td><input type="text" name="username" required></td></tr>
-<tr><td>Password:</td><td><input type="password" name="password" required></td></tr>
+<tr><td>User Id:</td><td><input type="text" name="username" ></td></tr>
+<tr><td>Password:</td><td><input type="password" name="password" ></td></tr>
+<tr><td>UserType:</td><td><select name="userType"><option value="">select</option><option value="Builder">Builder</option><option value="Owner">Owner</option></select></td></tr>
 <tr><td><input type="submit"  name="action" value="LogIn"></td></tr>
 
 <tr><td> <a href="Registration.jsp" > Sign Up</a></td></tr>
 </table> 
 </center>
-
+</form>
 </body>
 <script type="text/javascript">
 
 function myvalidation()
 {
-	var username=document.forms["Loginform"]["email"];
+	var username=document.forms["Loginform"]["username"];
 	var password=document.forms["Loginform"]["password"];
     if(username.value== "")
 	{
 	window.alert("please enter your username");
-	email.focus();
+	username.focus();
 	return false;
 	}
     if(password.value== "")
@@ -61,8 +62,7 @@ function myvalidation()
      password.focus();
      return false;
     }
-    alert("You entered a valid password: " + Password.value);
-    return true;
+    
 	}
 
 </script>
